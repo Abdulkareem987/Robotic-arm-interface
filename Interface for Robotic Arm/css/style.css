@@ -4,11 +4,15 @@ body {
     margin: 0;
     background-color: lightgray;
     font-family: 'Poppins';
+    text-align: center;
 
 }
 
 nav {
-    background: -webkit-linear-gradient(-135deg, #3a619b, #30475e);
+    background: -webkit-linear-gradient(-135deg, #04AA6D, #114d37);
+    background: -moz-linear-gradient(-135deg, #04AA6D, #114d37);
+    background: -o-linear-gradient(-135deg, #04AA6D, #114d37);
+    background: linear-gradient(-135deg, #04AA6D, #114d37);
     overflow: hidden;
     justify-content: center;
     text-align: center;
@@ -24,7 +28,10 @@ nav {
 
 
 footer {
-    background: -webkit-linear-gradient(-135deg, #3a619b, #30475e);
+    background: -webkit-linear-gradient(-135deg, #04AA6D, #114d37);
+    background: -moz-linear-gradient(-135deg, #04AA6D, #114d37);
+    background: -o-linear-gradient(-135deg, #04AA6D, #114d37);
+    background: linear-gradient(-135deg, #04AA6D, #114d37);
     text-align: center;
     position: fixed;
     width: 100%;
@@ -51,7 +58,7 @@ footer {
     height: auto;
     background-color:whitesmoke ;
     border-radius: 10px;
-    border: solid #30475e 1px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
     padding-left: 10px;
 }  
 
@@ -64,7 +71,7 @@ footer {
     height: auto;
     background-color:whitesmoke ;
     border-radius: 10px;
-    border: solid #30475e 1px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
@@ -98,7 +105,7 @@ footer {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #04aa6d;
     cursor: pointer;
   }
   
@@ -106,6 +113,22 @@ footer {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background:#04AA6D;
     cursor: pointer;
   }
+
+.action-button {
+	width: 100px;
+	background: #04AA6D;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+.action-button:hover, .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #114d37;
+  background: #114d37;
+}

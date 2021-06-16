@@ -33,3 +33,10 @@ var slider = document.getElementById("First");
     slider5.oninput = function() {
     output5.innerHTML = this.value;
         }
+    var slider6 = document.getElementById("Sixth");
+    var output6 = document.getElementById("Value6");
+     output6.innerHTML = slider6.value;
+              
+    slider6.oninput = function() {
+    output6.innerHTML = this.value;
+        }
