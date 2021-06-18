@@ -41,11 +41,30 @@ if ($conn->connect_error) {
 
                 if ($conn->query($update_status) === TRUE) 
                 {
-                    echo "Success!";
+                    $_SESSION['Run'] = "Motors are Running <br>";
+                    header('location: Run Interface.php');
+                    
                 } 
                 else 
                 {
                     echo "Error: " . $update_status . "<br>" . $conn->error;
+                }
+
+                $sql = "SELECT first_motor, second_motor, third_motor, fourth_motor, fifth_motor, sixth_motor FROM motor_range ORDER BY id DESC LIMIT 1";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+
+                    while($row = $result->fetch_assoc()) 
+                    {
+                        echo "First Motor = " . $row["first_motor"]."° - Second Motor: " . $row["second_motor"]."° - Third Motor: " . $row["third_motor"].
+                        "° - Fourth Motor: " . $row["fourth_motor"]."° - Fifth Motor: " . $row["fifth_motor"]."° - Sixth Motor: " . $row["sixth_motor"].
+                         "°";
+                    }
+                    
+                }
+                else {
+                    echo "0 Results.";
                 }
                             
             }
