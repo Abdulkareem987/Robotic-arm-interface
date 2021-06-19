@@ -31,7 +31,7 @@
                 unset($_SESSION['Status']);
             }
             ?>
-         <form name="rangeForm" method="POST" action="Save.php">
+         <form name="rangeForm" method="POST" action="Save_script.php">
             
         <div class="flex-container">
             <div class="flex-child">
@@ -93,7 +93,7 @@
         </div>
              <table>
                <input type="submit" name="save" class="action-button" value="Save" /> </form>
-               <form action="Run.php">
+               <form action="Run_script.php">
                <input type="submit" name="turn on" style="vertical-align:top" class="action-button" value="Turn On" /> </form>
                </table>
         

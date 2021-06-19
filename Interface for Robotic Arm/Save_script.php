@@ -9,13 +9,14 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
  }
 
+
     $sql = "CREATE DATABASE IF NOT EXISTS DBRoboticArm";
 
         If($conn->query($sql) === TRUE) 
         {
 
             $conn = new mysqli('localhost','root','', 'DBRoboticArm');
-                
+
             $tbl_range = "CREATE TABLE IF NOT EXISTS Motor_Range (
                     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                     first_motor INT(11) NOT NULL,

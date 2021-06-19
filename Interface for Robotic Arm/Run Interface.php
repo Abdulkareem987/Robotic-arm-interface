@@ -47,16 +47,16 @@
             }
             ?>
 
-            <div><h3>Angels for each Motor:</h3></div>
+            <div><h3>Angles for each Motor:</h3></div>
             <?php
-            if(isset($_SESSION['Angels']))
+            if(isset($_SESSION['Angles']))
             { 
                 ?>
                 <br> 
-                <?php echo $_SESSION['Angels'];?>
+                <?php echo $_SESSION['Angles'];?>
                 <?php
 
-                unset($_SESSION['Angels']);
+                unset($_SESSION['Angles']);
             }
             ?>
 
