@@ -2,7 +2,7 @@
 
 This project is a two part project to design an interface to control a robotic arm and connect the database to the hardware.
 
-The First Part:- Robotic Arm Interface:
+The First Part:- Interface for Robotic Arm:
 
 This folder contains the files that create a Database and an Interface that control each motor in a robotic arm and save the angles chosen by the user in the database.
 
@@ -24,5 +24,5 @@ This folder contains files that create an interface for the user to see each mot
 List of files:
 1- DBConnection Interface.html: This html file creates an interface for the user to choose a motor to see the angle for by clicking that motor button.
 
-Motors_script.php: these php files retrieve tha angels data from the database and show them to the user, one motor at a time.
+Motors_script.php: these php files retrieve tha angels data from the database and show them to the user, on motor at a time.
 
