@@ -57,9 +57,10 @@ if ($conn->connect_error) {
 
                     while($row = $result->fetch_assoc()) 
                     {
-                        echo "First Motor = " . $row["first_motor"]."° - Second Motor: " . $row["second_motor"]."° - Third Motor: " . $row["third_motor"].
-                        "° - Fourth Motor: " . $row["fourth_motor"]."° - Fifth Motor: " . $row["fifth_motor"]."° - Sixth Motor: " . $row["sixth_motor"].
+                        $_SESSION['Angels'] = "First Motor = " . $row["first_motor"]."° <br> Second Motor: " . $row["second_motor"]."° <br> Third Motor: " . $row["third_motor"].
+                        "° <br> Fourth Motor: " . $row["fourth_motor"]."° <br> Fifth Motor: " . $row["fifth_motor"]."° <br> Sixth Motor: " . $row["sixth_motor"].
                          "°";
+                        header('location: Run Interface.php');
                     }
                     
                 }

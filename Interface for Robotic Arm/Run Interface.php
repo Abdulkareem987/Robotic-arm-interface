@@ -7,6 +7,26 @@
         <meta charset="UTF-8">
         <TItle>Robotic Arm Interface</TItle>
         <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: auto;
+            margin:20px auto 20px;
+            }
+
+            td, th {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+            }
+
+            tr:nth-child(even) {
+            background-color: #93da9cad;
+            }
+
+        </style>
     </head>
     <body>   
        <nav>
@@ -18,8 +38,7 @@
             { 
                 ?>
                 <br>
-                <br>
-                <div style="color:green">   
+                <div style="color:blue">   
                 <strong>Success!</strong> <?php echo $_SESSION['Run'];?>
                 </div>
                 <?php
@@ -28,7 +47,23 @@
             }
             ?>
 
-             <button id ="backBtn"class="action-button"> Go Back </button>
+            <div><h3>Angels for each Motor:</h3></div>
+            <?php
+            if(isset($_SESSION['Angels']))
+            { 
+                ?>
+                <br> 
+                <?php echo $_SESSION['Angels'];?>
+                <?php
+
+                unset($_SESSION['Angels']);
+            }
+            ?>
+
+            <br>
+            <br>
+
+            <button id ="backBtn"class="action-button"> Go Back </button>
                
         
         <footer>

@@ -7,6 +7,7 @@
         <meta charset="UTF-8">
         <TItle>Robotic Arm Interface</TItle>
         <link rel="stylesheet" href="css/style.css">
+        
     </head>
     <body>   
        <nav>
@@ -22,7 +23,7 @@
             { 
                 ?>
                 
-                <div style="color:green">   
+                <div style="color:blue">   
                 <strong>Success!</strong> <?php echo $_SESSION['Status'];?>
                 </div>
                 <?php
