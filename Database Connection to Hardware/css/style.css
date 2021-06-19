@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+  
+  * {
+      margin: 0px; 
+      padding: 0px; 
+      box-sizing: border-box;
+  }
+  
+  body, html {
+      height: 100%;
+      font-family: 'Poppins';
+  }
+  
+  button {
+      outline: none !important;
+      border: none;
+      background: transparent;
+  }
+  
+  button:hover {
+      cursor: pointer;
+  }
+  
+  .limiter {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .container {
+    width: 100%;  
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #2575fc;
+    background: -webkit-linear-gradient(left, #6a11cb, #2575fc);
+    background: -o-linear-gradient(left, #6a11cb, #2575fc);
+    background: -moz-linear-gradient(left, #6a11cb, #2575fc);
+    background: linear-gradient(left, #6a11cb, #2575fc);
+  
+  }
+  
+  
+  .container-form-btn {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+  }
+  
+  .form-btn {
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+   
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 70px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111111;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .form-btn::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  
+    background: #2575fc;
+    background: -webkit-linear-gradient(right, #6a11cb, #2575fc);
+    background: -o-linear-gradient(right, #6a11cb, #2575fc);
+    background: -moz-linear-gradient(right, #6a11cb, #2575fc);
+    background: linear-gradient(right, #6a11cb, #2575fc);
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .form-btn:hover {
+    background-color: transparent;
+  }
+  .form-btn:hover:before {
+    opacity: 1;
+  }

@@ -36,6 +36,9 @@ if ($conn->connect_error)
                         $fifthSlider = $_POST['fifthSlider'];
                         $sixthSlider = $_POST['sixthSlider'];
 
+                        $query = "TRUNCATE TABLE Motor_range";
+                        mysqli_query($conn, $query);
+
                         $insert_range = "INSERT INTO Motor_Range (id ,first_Motor, second_Motor, third_Motor, fourth_Motor, fifth_Motor, sixth_Motor) 
                                 VALUES ('','$firstSlider', '$secondSlider', '$thirdSlider', '$fourthSlider', '$fifthSlider', '$sixthSlider')";
 

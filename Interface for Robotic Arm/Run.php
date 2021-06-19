@@ -20,27 +20,16 @@ if ($conn->connect_error) {
 
             If($conn->query($tbl_status) === TRUE) 
             {
-
-                
+                $query = "TRUNCATE TABLE Motor_status";
+                mysqli_query($conn, $query);
 
                 $insert_status = "INSERT INTO Motor_Status (motor_on) 
                         VALUES (true)
                         ";
 
-                if ($conn->query($insert_status) === FALSE) 
+                if ($conn->query($insert_status) === TRUE) 
                 {
-                    echo "Error: " . $update_status . "<br>" . $conn->error;
-                    
-                } 
-
-                $last_id = $conn->insert_id;
-
-                $update_status = "UPDATE Motor_Status SET motor_on = 'false'
-                                  Where id != $last_id
-                        ";
-
-                if ($conn->query($update_status) === TRUE) 
-                {
+            
                     $_SESSION['Run'] = "Motors are Running <br>";
                     header('location: Run Interface.php');
                     
@@ -50,7 +39,7 @@ if ($conn->connect_error) {
                     echo "Error: " . $update_status . "<br>" . $conn->error;
                 }
 
-                $sql = "SELECT first_motor, second_motor, third_motor, fourth_motor, fifth_motor, sixth_motor FROM motor_range ORDER BY id DESC LIMIT 1";
+                $sql = "SELECT first_motor, second_motor, third_motor, fourth_motor, fifth_motor, sixth_motor FROM motor_range";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
