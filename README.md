@@ -24,5 +24,5 @@ This folder contains files that create an interface for the user to see each mot
 List of files:
 1- DBConnection Interface.html: This html file creates an interface for the user to choose a motor to see the angle for by clicking that motor button.
 
-Motors_script.php: these php files retrieve tha angels data from the database and show them to the user, on motor at a time.
+Motors_script.php: these php files retrieve the angels data from the database and show them to the user, one motor at a time.
 
